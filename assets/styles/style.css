@@ -81,7 +81,7 @@ header {
 }
 
 .button-container {
-  background-color: #3060ff;
+  background-color: orangered;
   width: 100px;
   display: flex;
   justify-content: center;
@@ -91,7 +91,7 @@ header {
 }
 
 .button-container:hover {
-  background: #5a81ff;
+  background: rgb(233, 63, 1);
 }
 
 .jobs-list {
@@ -182,7 +182,7 @@ header {
 
 .apply-now {
   color: white;
-  background: #3060ff;
+  background: orangered;
   margin-right: 15px;
 }
 

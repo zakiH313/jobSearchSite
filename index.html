@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computing Careers</title>
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/modal.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -17,7 +18,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
   </head>
-  <body>
+  <body onload="modalOpen()">
     <header>
       <div class="header-container">
         <div class="logo">
@@ -28,6 +29,24 @@
         <span>Computing Careers</span>
       </div>
     </header>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Calling all recent Grads</h1>
+        <h3
+          style="padding-bottom: 25px; padding-left: 40px; padding-right: 40px"
+        >
+          Computing Careers have free one-to-one mentorship programs available.
+          But hurry it's first come, first serve and spaces are limited.
+          <a href="#" style="color: black">Learn More >>></a>
+        </h3>
+        <img
+          src="https://th.bing.com/th/id/Rd7c7b7225093bc3f2630231c95d115e8?rik=X3bkwFm%2fcYI9kw&riu=http%3a%2f%2ffpcp.net%2fwp-content%2fuploads%2fgraduation-silhouette-960x250.png&ehk=i95QWCsRtY5ahEzFN5s72cLOv5l%2fhRmqRuNzInZ5280%3d&risl=&pid=ImgRaw"
+          alt=""
+        />
+      </div>
+    </div>
+
     <div class="search">
       <div class="search-container">
         <div class="input-container">
@@ -50,5 +69,6 @@
       <div class="jobs-container"></div>
     </div>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/modal.js"></script>
   </body>
 </html>
