@@ -133,11 +133,14 @@ header {
   max-width: 1250px;
   width: 100%;
   background-color: #11121a;
-  height: 100vh;
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 0 25px;
+  padding-bottom: 90px;
+  padding-top: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .jobs-list h1 {
