@@ -73,6 +73,13 @@ header {
   margin-left: 25px;
 }
 
+.input-container #filter-cross {
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
 .button-container {
   background-color: #3060ff;
   width: 100px;

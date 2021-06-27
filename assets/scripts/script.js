@@ -6,6 +6,14 @@ document.querySelector(".button-container").addEventListener("click", () => {
   });
 });
 
+document.getElementById("filter-cross").addEventListener("click", () => {
+  getJobs().then((jobs) => {
+    document.getElementById("filter-jobs").value = "";
+    let unfilteredJobs = filterJobs(jobs, "");
+    showJobs(unfilteredJobs);
+  });
+});
+
 function getJobs() {
   return fetch("./assets/data/data.json")
     .then((response) => response.json())
@@ -16,6 +24,7 @@ function getJobs() {
 
 function filterJobs(jobs, searchText) {
   if (searchText) {
+    toggleStyle(document.getElementById("filter-cross"), "display", "flex");
     let filteredJobs = jobs.filter((job) => {
       if (
         job.roleName.toLowerCase().includes(searchText) ||
@@ -30,6 +39,7 @@ function filterJobs(jobs, searchText) {
     });
     return filteredJobs;
   } else {
+    toggleStyle(document.getElementById("filter-cross"), "display", "none");
     return jobs;
   }
 }
@@ -60,6 +70,14 @@ function showJobs(jobs) {
   `;
   });
   jobsContainer.innerHTML = jobsHTML;
+}
+
+function toggleStyle(el, styleName, value) {
+  if (el.style[styleName] !== value) {
+    el.style[styleName] = value;
+  } else {
+    el.style[styleName] = "";
+  }
 }
 
 getJobs().then((data) => {
