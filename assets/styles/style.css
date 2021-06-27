@@ -107,7 +107,6 @@ header {
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   background: #11121a;
 }
 
@@ -178,4 +177,16 @@ header {
   color: white;
   background: #3060ff;
   margin-right: 15px;
+}
+
+@media screen and (max-width: 930px) {
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .jobs-container {
+    grid-template-columns: 1fr;
+  }
 }
