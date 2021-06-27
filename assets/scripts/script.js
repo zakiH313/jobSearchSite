@@ -14,6 +14,14 @@ document.getElementById("filter-cross").addEventListener("click", () => {
   });
 });
 
+document.getElementById("header-left").addEventListener("click", () => {
+  getJobs().then((jobs) => {
+    document.getElementById("filter-jobs").value = "";
+    let unfilteredJobs = filterJobs(jobs, "");
+    showJobs(unfilteredJobs);
+  });
+});
+
 function getJobs() {
   return fetch("./assets/data/data.json")
     .then((response) => response.json())
