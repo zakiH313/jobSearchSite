@@ -47,6 +47,9 @@ function filterJobs(jobs, searchText) {
 function showJobs(jobs) {
   let jobsContainer = document.querySelector(".jobs-container");
   let jobsHTML = "";
+
+  document.getElementById("result-count").innerHTML = `${jobs.length}`;
+
   jobs.forEach((job) => {
     jobsHTML += `
     <div class="job-tile">
