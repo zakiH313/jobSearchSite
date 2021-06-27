@@ -20,20 +20,55 @@ header {
 }
 
 .header-container {
+  margin: 0 auto;
+  height: 100%;
+  justify-content: space-between;
+
   max-width: 1250px;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 25px;
 }
+.header-container .header-left {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
 
-.header-container .logo {
+.header-container .header-left .logo {
   height: 30px;
   margin-right: 10px;
 }
 
-.header-container .logo img {
+.header-container .header-left .logo img {
   height: 100%;
+}
+
+.header-container .header-right {
+  display: flex;
+}
+
+.header-container .header-right .join-now,
+.header-container .header-right .sign-in {
+  padding: 7px 16px;
+  /* border: 1px solid; */
+  border-radius: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: all 0.2s;
+  outline: none;
+  cursor: pointer;
+  background: orangered;
+}
+
+.header-container .header-right .join-now:hover,
+.header-container .header-right .sign-in:hover {
+  background: rgb(233, 63, 1);
+}
+
+.header-container .header-right .join-now {
+  margin-right: 30px;
 }
 
 .search {
